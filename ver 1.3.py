@@ -1,3 +1,5 @@
+
+#ver 1.5 adding checkin page to test data
 from bottle import run, route, view, get, post, request
 from itertools import count
 
@@ -30,6 +32,13 @@ tickets = [
 def index(): #this function attatches decorators above
     pass
 
+
+
+@route("/check-in")
+@view("check-in")
+def check_in(): #this function attatches decorators above
+    data = dict (ticket_list = tickets)
+    return data
 
 
 
