@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	%include('shared/header.html')
+	%include('shared/nav.html')
+				<div class="row">
+			%for ticket in ticket_list:
+				<body class = "col s6 row light-blue lighten-3 conatiner">
+				<div class="row blue">
+				<div class="col s6">
+				  <div class="card">
+					<div class="card-image">
+					  <img src="images/sample-1.jpg">
+					  <span class="card-title"></span>
+					  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
+					</div>
+					<div class="card-content center">
+					<p>{{ticket.name}}</p>
+					  <p>{{ticket.email}}</p>
+					  <p>{{ticket.dob}}</p>
+					%if ticket.check_in == True:
+						<p><a href = "/check-in-success/{{ticket.id}}"></a> checked in</p>
+					%else:
+						<p> not checked in</p>
+					%end
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			%end
+		</div>
+	
+	</body>
+
+
+
+
+<html>
