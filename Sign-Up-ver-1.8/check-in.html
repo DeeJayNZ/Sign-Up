@@ -2,34 +2,28 @@
 <html>
 	%include('shared/header.html')
 	%include('shared/nav.html')
-				<div class="row">
+			<body class="red">
 			%for ticket in ticket_list:
-				<body class = "col s6 row light-blue lighten-3 conatiner">
-				<div class="row blue">
-				<div class="col s6">
+				<div class="col s6 row container">
 				  <div class="card">
 					<div class="card-image">
 					  <img src="images/sample-1.jpg">
 					  <span class="card-title"></span>
 					  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
 					</div>
-					<div class="card-content center">
+					<div class="card-content center blue-grey">
 					<p>{{ticket.name}}</p>
 					  <p>{{ticket.email}}</p>
 					  <p>{{ticket.dob}}</p>
 					%if ticket.check_in == True:
-						<p><a href = "/check-in-success/{{ticket.id}}"></a> checked in</p>
+						<p>checked in</p>
 					%else:
-						<p> not checked in</p>
+						<p><a href="/check-in-success/{{ticket.id}}"> not checked in</a></p>
 					%end
 					</div>
 				  </div>
 				</div>
-			  </div>
-			</div>
 			%end
-		</div>
-	
 	</body>
 
 
