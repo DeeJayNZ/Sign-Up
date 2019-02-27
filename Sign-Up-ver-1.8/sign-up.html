@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+	%include('shared/header.html')
+	%include('shared/nav.html')
+		<body class = "red">
+		  <div class="row">
+		<form class="col s12" action = "/sell-ticket-success" method = "post">
+		  <div class="row">
+			<div class="input-field col s6">
+			  <input placeholder="Bloe Jog" id="first_name" name="name"type="text" class="validate">
+			  <label for="first_name"> Full Name</label>
+			</div>
+			<div class="input-field col s6">
+			  <input id="inp_dob" type="text" name="dob"class="validate">
+			  <label for="inp_dob">DD.MM.YY</label>
+			</div>
+		  </div>
+		  </div>
+		  <div class="row">
+			<div class="input-field col s12">
+			  <input id="email" type="email" name="email" class="validate">
+			  <label for="email">Email</label>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col s12">
+			</div>
+		  </div>
+		</form>
+		</body>
+		<div class="fixed-action-btn">
+  <a class="btn-floating btn-large red">
+    <i class="large material-icons">mode_edit</i>
+  </a>
+  <ul>
+    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+  </ul>
+</div>
+		
+
+
+
+
+
+
+
+</html>

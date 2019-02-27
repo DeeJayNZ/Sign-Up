@@ -51,6 +51,11 @@ def check_in_success(ticket_id):
     data = dict(ticket = found_ticket)
     found_ticket.check_in= True
     return data
+
+@route('/sign-up')
+@view('sign-up')
+def sign_in():
+    pass
             
 
 
