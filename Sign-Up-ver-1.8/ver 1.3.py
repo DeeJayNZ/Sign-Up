@@ -56,6 +56,17 @@ def check_in_success(ticket_id):
 @view('sign-up')
 def sign_in():
     pass
+
+@route('/sign-up-success', method='POST')
+@view('sign-up-success')
+def sign_up_success():
+    name = request.forms.get('name')
+    email = request.forms.get('email')
+    date_of_birth = request.forms.get('dob')
+    
+    new_ticket = Ticket(name, email, date_of_birth, False)
+    tickets.append(new_ticket)
+    
             
 
 
