@@ -40,7 +40,34 @@ def check_in(): #this function attatches decorators above
     data = dict (ticket_list = tickets)
     return data
 
+@route('/check-in-success/<ticket_id>')
+@view('check-in-success')
+def check_in_success(ticket_id):
+    ticket_id = int(ticket_id)
+    found_ticket = None
+    for ticket in tickets:
+        if ticket.id == ticket_id:
+            found_ticket = ticket
+    data = dict(ticket = found_ticket)
+    found_ticket.check_in= True
+    return data
 
+@route('/sign-up')
+@view('sign-up')
+def sign_in():
+    pass
+
+@route('/sign-up-success', method='POST')
+@view('sign-up-success')
+def sign_up_success():
+    name = request.forms.get('name')
+    email = request.forms.get('email')
+    date_of_birth = request.forms.get('dob')
+    
+    new_ticket = Ticket(name, email, date_of_birth, False)
+    tickets.append(new_ticket)
+    
+            
 
 
 
